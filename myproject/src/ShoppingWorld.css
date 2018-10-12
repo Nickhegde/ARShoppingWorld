@@ -1,0 +1,179 @@
+/* Home */
+.title {
+    height: 20vh;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.title #headerIcon {
+    float: left;
+    width: 8vw;
+    height: 70%;
+    background: url("Images/shop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 2%;
+    margin-left: 3%;
+    /* border: 1px solid black; */
+}
+
+.title #headerTitle {
+    display: inline-block;
+    margin-top: 3%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5em;
+    font-weight: bold;
+    color: rgba(234, 14, 52, 0.8431372549019608);
+    /* border: 1px solid black; */
+}
+.title #homeLogout{
+    float:right;
+    margin-top: 4.5%;
+    margin-right:5%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(234, 14, 52, 0.8431372549019608);
+    outline: none;
+}
+.title #homeLogout:hover{
+    cursor: pointer;
+}
+
+.shoppingCategoryCards {
+    width: 100%;
+    margin-top: 3%;
+    /* border:1px solid black; */
+}
+
+.shoppingCategoryCards nav {
+    width: 28%;
+    height: 60vh;
+    border: 1px solid black;
+    margin-left: 3%;
+    display: inline-block;
+}
+
+.shoppingCategoryCards .menCard {
+    margin-left: 5%;
+    display: inline-block;
+    background: url("Images/men3.jpeg");
+    background-size: cover;
+}
+
+.shoppingCategoryCards .womenCard {
+    background: url("Images/women1.jpeg");
+    background-size: cover;
+}
+
+.shoppingCategoryCards .kidsCard {
+    background: url("Images/kids1.jpeg");
+    background-size: cover;
+}
+
+.shoppingCategoryCards nav div {
+    width: 50%;
+    height: 6%;
+    margin-top: 85%;
+    margin-left: 24%;
+    text-align: center;
+    background-color: white;
+    opacity: 0.8;
+    font-size: 20px;
+    font-weight: 700;
+    border: 1px solid white;
+}
+
+.shoppingCategoryCards nav div:hover {
+    box-shadow: 2px 2px 2px -1px white, -2px -2px 2px -1px white;
+    cursor: pointer;
+}
+
+/* ShoppingWorld4 */
+.mensPage {
+    height: 18vh;
+    width: 100%;
+    text-align: center;
+    background: url("Images/mensite1.jpeg");
+    background-size: cover;
+    /* border:1px solid black; */
+}
+
+.mensPage #mensPageTitle {
+    display: inline-block;
+    margin-top: 3%;
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    background-color: white;
+    opacity: 0.95;
+    /* border:1px solid black; */
+}
+
+.imageContainer {
+    width: 100%;
+    height: 80vh;
+    /* border:1px solid black; */
+}
+
+.imageContainer div {
+    display: inline-block;
+    height: 50%;
+    width: 35%;
+    margin-left: 10vw;
+    margin-top: 2%;
+    /* border:1px solid black; */
+}
+
+.imageContainer div img {
+    width: 380px;
+    height: 350px;
+}
+
+.imageContainer div img:hover {
+    box-shadow: 2px 2px 2px 0px black, -2px -2px 2px 0px black;
+}
+
+iframe {
+    width: 100%;
+    height: 80vh;
+    display: none;
+}
+
+.itemNoDisplay {
+    display: none;
+}
+
+.itemDisplay {
+    display: block;
+}
+
+.shoppingWorldAr {
+    width: 100%;
+    height: 68%;
+
+}
+ /* ShoppingWorldAr */
+ .arBody{
+     overflow: hidden;
+ }
+.shoppingWorldAr button {
+    width: 8%;
+    height: 8%;
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 50%;
+    border:1px solid black;
+    outline: none;
+
+}
+
+.shoppingWorldAr button:hover {
+    cursor: pointer;
+    background-color: red;
+}
+.arRotationBtnactive{
+    background-color: red;
+}
