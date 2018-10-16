@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 // import ReactDOM from 'react-dom';
-import Men from './Men';
+//import Men from './Men';
 // import { Router, Route,Link, browserHistory, IndexRoute } from 'react-router';
 // import { Link } from 'react-router-dom';
 import fire from './Config/Fire';

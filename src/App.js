@@ -39,7 +39,6 @@ class App extends Component {
                 <Route path="/Login" exact component={Login} /> 
                 <Route path="/Men" exact component={Men} />
                 <Route path="/ShoppingAr" exact component={Areality} />
-                {/* <Route exact path="/ShoppingAr"  render={() => {window.location.href="ShoppingAr.html"}} /> */}
                 {this.state.user ? ( <Home />) : (<Login />)}
             </Switch>
         </Router> 
