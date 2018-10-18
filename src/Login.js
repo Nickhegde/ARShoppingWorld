@@ -13,7 +13,9 @@ class Login extends Component {
     this.signIn=this.signIn.bind(this);
     this.state = {
       email: '',
+      confirmEmail:'',
       password: '',
+      confirmPassword:'',
       flag:0
     };
   }
@@ -37,11 +39,16 @@ class Login extends Component {
   }
   signup(e){
     e.preventDefault();
-    fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
-    .catch((error) => {
-        console.log(error);
+    if((this.state.password==this.state.confirmPassword)&&(this.state.email==this.state.confirmEmail)){
+      fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
+      .catch((error) => {
+        alert("Invalid Email or Password");
       })
-  }
+    }
+      else{
+          alert("Invalid Email or Password");
+      }
+    }
 
 signUp(){
   this.setState({ flag: 1 });
@@ -74,10 +81,10 @@ signIn(){
                       <div className="signUpContent">
                          <input id="firstNamefield" type="text" placeholder="First Name"/>
                          <input id="lastNamefield" type="text" placeholder="Last Name"/>
-                         <input id="emailIdfield" type="text" placeholder="Email Address"/>
-                         <input id="confirmEmailIdfield" value={this.state.email} onChange={this.handleChange} type="email" name="email" aria-describedby="emailHelp" placeholder="Confirm Email Address"/>
-                         <input id="newPasswordfield" type="password" placeholder="Password"/>
-                         <input id="confirmNewPasswordfield" value={this.state.password} onChange={this.handleChange} type="password" name="password"  placeholder="Confirm Password"/>
+                         <input id="emailIdfield" value={this.state.email} onChange={this.handleChange} type="email" name="email" aria-describedby="emailHelp" placeholder="Email Address"/>
+                         <input id="confirmEmailIdfield" value={this.state.confirmEmail} onChange={this.handleChange} type="email" name="confirmEmail" aria-describedby="emailHelp" placeholder="Confirm Email Address"/>
+                         <input id="newPasswordfield" type="password" value={this.state.password} onChange={this.handleChange} name="password" placeholder="Password"/>
+                         <input id="confirmNewPasswordfield" value={this.state.confirmPassword} onChange={this.handleChange} type="password" name="confirmPassword"  placeholder="Confirm Password"/>
                          <button id="createBtn" onClick={this.signup}>CREATE</button>
                          <button id="facebookLoginBtn">SIGN IN WITH FACEBOOK</button>
                          <span id="footerfield">View our Privacy Policy for more details.</span>

@@ -10,7 +10,6 @@ class Home extends Component {
 
     logout = () => {
         fire.auth().signOut();
-        this.props.history.push("/Login");
     }
     
     render() {

@@ -52,6 +52,7 @@
     height: 60vh;
     border: 1px solid black;
     margin-left: 3%;
+    color: rgba(234, 14, 52, 0.8431372549019608);
     display: inline-block;
 }
 
@@ -90,7 +91,7 @@
     cursor: pointer;
 }
 
-/* ShoppingWorld4 */
+/* Men.js */
 .mensPage {
     height: 18vh;
     width: 100%;
@@ -110,10 +111,22 @@
     opacity: 0.95;
     /* border:1px solid black; */
 }
+.mensPage #redirectHome {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgba(234, 14, 52, 0.8431372549019608);
+    float: right;
+    margin-top:4%;
+    margin-right:2%;
+    border-radius: 10px;
+    border:1px solid black;
+    outline: none;
+}
 
 .imageContainer {
     width: 100%;
-    height: 80vh;
+    height: 100%;
+    background-color: rgba(240, 206, 212, 0.247);;
     /* border:1px solid black; */
 }
 
@@ -125,6 +138,10 @@
     margin-top: 2%;
     /* border:1px solid black; */
 }
+ .imageContainer div p{
+    color: rgba(234, 14, 52, 0.8431372549019608);
+    font-weight: bold;
+ }
 
 .imageContainer div img {
     width: 380px;
@@ -149,16 +166,19 @@
     display: block;
 }
  /* ShoppingWorldAr */
+ .shoppingWorldAr{
+   overflow: hidden;
+ }
  .shoppingWorldAr a-scene{
-     height:900px
+     height:1115px
  }
 
 .shoppingWorldAr .arButtonScreen {
     width: 8%;
     height: 8%;
-    /* position: relative; */
+    position: relative;
     display: inline-block;
-    margin-top:8%;
+    margin-top:15%;
     margin-left:16%;
     font-size: 30px;
     border-radius: 50%;
@@ -170,9 +190,7 @@
     cursor: pointer;
     background-color: red;
 }
-.arRotationBtnactive{
-    background-color: red;
-}
+
 .a-enter-vr embedded.a-enter-vr-button{
     display:none;
 }
