@@ -3,14 +3,16 @@ import fire from './Config/Fire';
 import Login from './Login';
 import Home from './Home';
 import Men from './Men';
-import Areality from './ShoppingAr'
+import Areality from './ShoppingAr';
+import PrivateRoute from './PrivateRoute';
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 class App extends Component {
   constructor() {
     super();
     this.state = ({
-      user: {}
+      authenticated: false,
+      user:{}
       });
     this.authListener = this.authListener.bind(this);
   }
@@ -24,9 +26,15 @@ class App extends Component {
       console.log(user);
       if (user) {
         this.setState({ user });
+        this.setState({
+          authenticated:true
+        })
         // localStorage.setItem('user', user.uid);
       } else {
         this.setState({ user: null });
+        this.setState({
+          authenticated:false
+        })
         // localStorage.removeItem('user');
       }
     });
@@ -36,9 +44,8 @@ class App extends Component {
       <div>       
         <Router>
             <Switch>
-                <Route path="/Login" exact component={Login} /> 
-                <Route path="/Men" exact component={Men} />
-                <Route path="/ShoppingAr" exact component={Areality} />
+                <Route path="/Login" exact component={Login} />
+                <PrivateRoute path="/ShoppingAr" exact component={Areality} authenticated={this.state.authenticated}/>
                 {this.state.user ? ( <Home />) : (<Login />)}
             </Switch>
         </Router> 

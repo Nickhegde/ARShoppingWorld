@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import fire from './Config/Fire';
+import FacebookLogin from './FacebookLogin';
 import './Login.css';
 import './ShoppingWorld.css';
 
@@ -16,7 +17,8 @@ class Login extends Component {
       confirmEmail:'',
       password: '',
       confirmPassword:'',
-      flag:0
+      flag:0,
+      username:null
     };
   }
 
@@ -27,14 +29,12 @@ class Login extends Component {
   login(e) {
     console.log("login");
     e.preventDefault();
-    fire
-      .auth()
-      .signInWithEmailAndPassword(this.state.email, this.state.password)
-      .then((u)=>{
-        this.props.history.push("/");
+    fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
+        // this.props.history.push("/");
       })
       .catch((error) => {
         console.log(error);
+        alert("Invalid Email or Password");
       });
   }
   signup(e){
@@ -67,6 +67,17 @@ signIn(){
     {document.getElementById("signUp").style.borderBottom="none"}
   </script>
 }
+
+onFacebookLogin = (loginStatus, resultObject) => {
+  if (loginStatus === true) {
+    this.setState({
+      username: resultObject.user.name
+    });
+  } else {
+    alert('Facebook login error');
+  }
+}
+
   render() {
     return (
 <Fragment>
@@ -100,7 +111,9 @@ signIn(){
                                     <input id="passwordfield" value={this.state.password} onChange={this.handleChange} type="password" name="password" placeholder="Password"/>
                                     <button id="loginBtn" onClick={this.login}>LOGIN</button>
                                     <span>Forgot Password?</span>
-                                    <button id="facebookLoginBtn">SIGN IN WITH FACEBOOK</button>
+                                    <FacebookLogin onLogin={this.onFacebookLogin}>
+                                    <button id="facebookLoginBtn" >SIGN IN WITH FACEBOOK</button>
+                                    </FacebookLogin>
                                     <span id="footerfield">View our Privacy Policy for more details.</span>
                                   </section>
                                 </div>)}
