@@ -6,9 +6,6 @@ import './ShoppingWorld.css';
 import { Link } from 'react-router-dom';
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     logout = () => {
         fire.auth().signOut();

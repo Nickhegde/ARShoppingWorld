@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import fire from './Config/Fire';
 import FacebookLogin from './FacebookLogin';
 import './Login.css';
-import './ShoppingWorld.css';
 
 class Login extends Component {
   constructor(props) {
