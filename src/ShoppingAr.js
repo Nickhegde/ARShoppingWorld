@@ -55,7 +55,7 @@ class Areality extends Component {
          <Fragment>
              <div className="shoppingWorldAr">
              <a href ="/Men" exact="true">
-                    <button className="arButtonScreen" id="arRotationBtn" >Back</button>
+                    <button className="arButtonScreen" id="arBackBtn" >Back</button>
               </a>
              <button  className="arButtonScreen" id="arSizeIncrement" onClick={this.increase}>+</button>
              <button  className="arButtonScreen" id="arSizeDecrement" onClick={this.decrease} >-</button>
