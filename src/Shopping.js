@@ -1,6 +1,6 @@
 
 var $ = document.getElementById.bind(document),
-    private = {
+    privateEle = {
         elements: {
             header: $("heading"),
             images: $("images"),
@@ -11,12 +11,12 @@ var $ = document.getElementById.bind(document),
             ar: $("arContainer")
         }
     },
-    x = private.elements;
-function iframeAr(value){
+    x = privateEle.elements;
+function iframeAr(value) {
     x.header.classList.toggle("itemNoDisplay");
     x.ar.style.display = "block";
     x.images.classList.toggle("itemNoDisplay");
-    x.ar.setAttribute('src', "ShoppingWorldAr.html?param="+value);
+    x.ar.setAttribute('src', "ShoppingWorldAr.html?param=" + value);
 }
 x.tshirt1.addEventListener("click", function () {
     iframeAr(1);
