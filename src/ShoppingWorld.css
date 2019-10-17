@@ -190,8 +190,8 @@
     background-color: red;
 }
 
-.a-enter-vr embedded.a-enter-vr-button {
-    display: none;
+.a-enter-vr .a-enter-vr-button {
+    display: none!important;
 }
 
 #arjsDebugUIContainer {
