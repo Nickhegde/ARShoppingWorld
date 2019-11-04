@@ -23,6 +23,11 @@
     "react-scripts": "1.1.5",
     "react-webcam": "^1.0.4"
   },
+  "engines": {
+    "npm": "6.12.0",
+    "node": "v12.13.0"
+  },
+  "proxy": "http://localhost:8080",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -31,7 +36,9 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "body-parser": "^1.19.0",
     "css-loader": "^1.0.0",
+    "express": "^4.17.1",
     "html-loader": "^0.5.5",
     "ts-loader": "^5.2.2",
     "webpack-cli": "^3.1.2"
