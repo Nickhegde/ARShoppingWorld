@@ -1,43 +1,39 @@
 /* Home */
 .title {
-    height: 20vh;
-    width: 100%;
     text-align: center;
     border: 1px solid black;
+    height:75px;
 }
 
 .title #headerIcon {
     float: left;
-    width: 8vw;
-    height: 70%;
+    width: 60px;
+    height: 60px;
     background: url("Images/shop.png");
     background-repeat: no-repeat;
     background-size: contain;
-    margin-top: 2%;
-    margin-left: 3%;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .title #headerTitle {
     display: inline-block;
-    margin-top: 3%;
+    margin-top: 20px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 5em;
+    font-size: 30px;
     font-weight: bold;
     color: rgba(234, 14, 52, 0.8431372549019608);
 }
 
 .title #homeLogout {
     float: right;
-    margin-top: 4.5%;
-    margin-right: 5%;
+     margin-top: 20px;
+    margin-right: 20px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 20px;
     color: rgba(234, 14, 52, 0.8431372549019608);
     outline: none;
-}
-
-.title #homeLogout:hover {
     cursor: pointer;
 }
 
@@ -204,20 +200,28 @@
 
     /* Home */
     .title {
-        height: 9vh;
+        height:50px;
+    }
+    .title #headerIcon {
+       width: 40px;
+       height: 40px;
+       margin-top:5px;
     }
 
     .title #headerTitle {
-        font-size: 2em;
+        font-size:20px;
+        margin-top:15px;
     }
 
     .title #homeLogout {
-        margin-top: 3.5%;
-        font-size: 50%;
+        font-size: 12px;
+        margin-top:15px;
+        margin-right:5px;
     }
 
     .title #headerIcon {
         height: 48px;
+        margin-top:5px;
     }
 
     .shoppingCategoryCards nav {
@@ -289,11 +293,9 @@
 
 @media screen and (max-height:800px) {
     .title {
-        height: 7vh;
     }
 
     .title #headerTitle {
-        font-size: 1em;
     }
 
     .shoppingCategoryCards nav {
@@ -311,11 +313,9 @@
 @media screen and (min-height:800px)and (max-height:900px) {
      /* Home */
     .title {
-        height: 7vh;
     }
 
     .title #headerTitle {
-        font-size: 1em;
     }
 
     .shoppingCategoryCards nav div {
@@ -339,16 +339,12 @@
 
     /* Home */
     .title {
-        height: 9vh;
     }
 
     .title #headerTitle {
-        font-size: 4em;
     }
 
     .title #homeLogout {
-        margin-top: 3.5%;
-        font-size: 200%;
     }
 
     .title #headerIcon {
