@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import './ShoppingWorld.css';
-import shirtObj from './3dmodels/Tshirt1/BetterTShirt/BetterShirt.obj';
-import shirtMtl from './3dmodels/Tshirt1/BetterTShirt/BetterShirt.mtl';
+import shirtObj from '3dmodels/Tshirt1/BetterTShirt/BetterShirt.obj';
+import shirtMtl from '3dmodels/Tshirt1/BetterTShirt/BetterShirt.mtl';
 
 class Areality extends Component {
     constructor() {
@@ -61,7 +61,7 @@ class Areality extends Component {
 
                         <a-marker preset='hiro'>
                             <a-entity id="arObject" position="0 0 -1" rotation="270 0 0" scale=" 0.5 0.5 0.5"
-                                obj-model="obj:##tshirt-obj; mtl:##tshirt-mtl" >
+                                obj-model="obj:#tshirt-obj; mtl:#tshirt-mtl" >
                                 <a-animation id="objAnimation" attribute="rotation" dur="5000" fill="forwards" to="0 360 0"
                                     position="1 2 3" repeat="indefinite" begin="rotate" end="endrotate">
                                 </a-animation>
