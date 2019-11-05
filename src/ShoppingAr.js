@@ -53,15 +53,15 @@ class Areality extends Component {
                     </a>
                     <button className="arButtonScreen" id="arSizeIncrement" onClick={this.increase}>+</button>
                     <button className="arButtonScreen" id="arSizeDecrement" onClick={this.decrease} >-</button>
-                    <a-scene embedded arjs='source type:webcam;' >
+                    <a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam;'>
                         <a-assets>
                             <a-asset-item id="tshirt-obj" src={shirtObj}></a-asset-item>
                             <a-asset-item id="tshirt-mtl" src={shirtMtl}></a-asset-item>
                         </a-assets>
 
                         <a-marker preset='hiro'>
-                            <a-entity id="arObject" position="0 0 -1" rotation="270 0 0" scale=" 0.5 0.5 0.5"
-                                obj-model="obj:#tshirt-obj; mtl:#tshirt-mtl" >
+                            <a-entity id="arObject" position="0 0 -1" rotation="270 0 0" scale=" 0.01 0.01 0.01"
+                                obj-model="obj: #tshirt-obj; mtl: #tshirt-mtl">
                                 <a-animation id="objAnimation" attribute="rotation" dur="5000" fill="forwards" to="0 360 0"
                                     position="1 2 3" repeat="indefinite" begin="rotate" end="endrotate">
                                 </a-animation>
