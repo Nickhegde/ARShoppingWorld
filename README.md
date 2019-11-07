@@ -153,13 +153,18 @@ After placing marker the 3D-model looks lik this,
 The printout of marker can be placed on the user's body and the shirt will appear on the user as if he is wearing it, thus providing the trial room like experience.
 
 
-### Important Note
+## Important Note
 
 The project is still not completed, hence the following features are still in progress,
 1. Facebook login.
 2. Women and Kid's section.
 
 Other than these major features there might be some minor bugs or issues which will be resolved in future as the development proceed. 
+
+## Acknowledgements
+
+[https://github.com/prashant-andani/AR-Alphabets](https://github.com/prashant-andani/AR-Alphabets)
+[https://aframe.io/docs/0.9.0/introduction/](https://aframe.io/docs/0.9.0/introduction/)
 
 
 
