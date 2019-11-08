@@ -17,7 +17,8 @@ class Login extends Component {
       password: '',
       confirmPassword: '',
       flag: 0,
-      username: null
+      username: null,
+      borderBottom: 'sign-in',
     };
   }
 
@@ -26,7 +27,6 @@ class Login extends Component {
   }
 
   login(e) {
-    console.log("login");
     e.preventDefault();
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
       this.props.history.push("/");
@@ -44,23 +44,17 @@ class Login extends Component {
           alert("Invalid Email or Password");
         })
     }
-    else {
-      alert("Invalid Email or Password");
-    }
   }
 
   signUp() {
     this.setState({ flag: 1 });
-    console.log(this.state.flag);
-    document.getElementById("signUp").style.borderBottom = "2px solid black";
-    document.getElementById("signIn").style.borderBottom = "none";
+    this.setState({ borderBottom: 'sign-up' });
 
   }
   signIn() {
     this.setState({ flag: 0 });
-    console.log(this.state.flag);
-    document.getElementById("signIn").style.borderBottom = "2px solid black";
-    document.getElementById("signUp").style.borderBottom = "none";
+    this.setState({ borderBottom: 'sign-in' });
+
   }
 
   onFacebookLogin = (loginStatus, resultObject) => {
@@ -74,13 +68,14 @@ class Login extends Component {
   }
 
   render() {
+    const { borderBottom } = this.state;
     return (
       <Fragment>
         <div className="login">
           <header className="status-bar">
             <div className="login-Signup">
-              <nav id="signIn" onClick={this.signIn}>SIGN IN</nav>
-              <nav id="signUp" onClick={this.signUp}>SIGN UP</nav>
+              <nav id="signIn" className={`${borderBottom === 'sign-in' ? 'apply-border-bottom' : ''}`} onClick={this.signIn}>SIGN IN</nav>
+              <nav id="signUp" className={`${borderBottom === 'sign-up' ? 'apply-border-bottom' : ''}`} onClick={this.signUp}>SIGN UP</nav>
             </div>
           </header>
           {this.state.flag ? (<div className="signUpContainer">

@@ -37,7 +37,7 @@
 }
 
 #signIn:hover,
-#signUp:hover {
+#signUp:hover  {
   border-bottom: 2px solid black;
   cursor: pointer;
 }
@@ -50,12 +50,15 @@
   float: right;
 }
 
+.apply-border-bottom {
+  border-bottom : 2px solid black;
+}
+
 .login .content {
   text-align: center;
 }
 
 .signInCard {
-  /* width: 25%; */
   width: 330px;
   color: #2f2b2c;
   font-size: 16px;
