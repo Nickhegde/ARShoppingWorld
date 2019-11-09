@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import fire from './Config/Fire';
+import { fire } from './Config/Fire';
 import Login from './Login';
 import Home from './Home';
 import Men from './Men';
@@ -29,13 +29,11 @@ class App extends Component {
         this.setState({
           authenticated: true
         })
-        // localStorage.setItem('user', user.uid);
       } else {
         this.setState({ user: null });
         this.setState({
           authenticated: false
         })
-        // localStorage.removeItem('user');
       }
     });
   }

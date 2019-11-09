@@ -137,7 +137,7 @@ Then the following screen appears,
 
 ![Blank](Images/plainScreen.png?raw=true "Blank screen")
 
-Where the user will see three buttons, `Back`, `+` and `-`..
+Where the user will see three buttons, `Back`, `+` and `-`.
 `Back` button navigates to previous page.
 
 Now, if the user keeps the `hiro` marker infront of the camera the 3D-object appears on the screen which can be rotated using marker movements also the size of the 3d object (dress) can be increased or decreased by clicking on `+` and `-` accordingly.
@@ -163,9 +163,13 @@ Other than these major features there might be some minor bugs or issues which w
 
 ## Acknowledgements
 
+[https://firebase.google.com/docs/auth/web/firebaseui](https://firebase.google.com/docs/auth/web/firebaseui)
+
 [https://github.com/prashant-andani/AR-Alphabets](https://github.com/prashant-andani/AR-Alphabets)
 
 [https://aframe.io/docs/0.9.0/introduction/](https://aframe.io/docs/0.9.0/introduction/)
+
+[https://menubar.io/firebase-facebook-login-react](https://menubar.io/firebase-facebook-login-react)
 
 
 
