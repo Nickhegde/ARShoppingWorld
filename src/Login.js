@@ -19,6 +19,7 @@ class Login extends Component {
       flag: 0,
       username: null,
       borderBottom: 'sign-in',
+      togglePasswordDisplay: false
     };
   }
 
@@ -57,8 +58,12 @@ class Login extends Component {
 
   }
 
+  togglePasswordDisplay = () => {
+    this.setState({ togglePasswordDisplay: !this.state.togglePasswordDisplay })
+  }
+
   render() {
-    const { borderBottom } = this.state;
+    const { borderBottom, togglePasswordDisplay } = this.state;
     return (
       <Fragment>
         <div className="login">
@@ -88,7 +93,10 @@ class Login extends Component {
                 <p>World</p>
               </div>
               <input id="mailIdfield" value={this.state.email} onChange={this.handleChange} type="email" name="email" aria-describedby="emailHelp" placeholder="Email Address" />
-              <input id="passwordfield" value={this.state.password} onChange={this.handleChange} type="password" name="password" placeholder="Password" />
+              <div className="password-section">
+                <input id="passwordfield" value={this.state.password} onChange={this.handleChange} type={togglePasswordDisplay ? "text" : "password"} name="password" placeholder="Password" />
+                <span id="showpasswordbtn" className="show-password" onClick={this.togglePasswordDisplay}>{togglePasswordDisplay ? "HIDE" : "SHOW"}</span>
+              </div>
               <button id="loginBtn" onClick={this.login}>LOGIN</button>
               <span className='forgot-password-btn'>Forgot Password?</span>
               <FacebookLogin>
