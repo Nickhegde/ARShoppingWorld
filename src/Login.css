@@ -76,7 +76,23 @@
   float: left;
   margin-left: 4%;
   margin-top: 5%;
+}
 
+.error-msg-container{
+  display: flex;
+  width:100%;
+  margin-bottom:10px;
+  cursor: pointer;
+}
+.error-icon{
+  height:15px;
+  width:15px;
+  margin-top:auto;
+  margin-bottom:auto;
+}
+.error-msg{
+  padding-left:10px;
+  font-size: 15px;
 }
 
 .signInCard .shoppingworldtitle {
