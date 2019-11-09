@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { fire } from './Config/Fire';
+import { fire, auth } from './Config/Fire';
 import FacebookLogin from './FacebookLogin';
 import './Login.css';
 
@@ -15,6 +15,7 @@ class Login extends Component {
       email: '',
       confirmEmail: '',
       password: '',
+      newPassword: '',
       confirmPassword: '',
       flag: 0,
       username: null,
@@ -39,23 +40,25 @@ class Login extends Component {
   }
   signup(e) {
     e.preventDefault();
-    if ((this.state.password == this.state.confirmPassword) && (this.state.email == this.state.confirmEmail)) {
-      fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
-        .catch((error) => {
-          alert("Invalid Email or Password");
-        })
-    }
+    auth().createUserWithEmailAndPassword(this.state.email, this.state.newPassword)
+      .catch((error) => {
+        alert("Invalid Email or Password");
+      })
+    this.setState({});
+    this.setState({
+      email: '',
+      confirmEmail: '',
+      password: '',
+      newPassword: '',
+      confirmPassword: '',
+    })
   }
 
   signUp() {
-    this.setState({ flag: 1 });
-    this.setState({ borderBottom: 'sign-up' });
-
+    this.setState({ flag: 1, borderBottom: 'sign-up', email: '', });
   }
   signIn() {
-    this.setState({ flag: 0 });
-    this.setState({ borderBottom: 'sign-in' });
-
+    this.setState({ flag: 0, borderBottom: 'sign-in', email: '', });
   }
 
   togglePasswordDisplay = () => {
@@ -63,7 +66,8 @@ class Login extends Component {
   }
 
   render() {
-    const { borderBottom, togglePasswordDisplay } = this.state;
+    const { borderBottom, togglePasswordDisplay, email, password, confirmEmail, newPassword, confirmPassword } = this.state;
+    const createBtnStatus = email && (email === confirmEmail) && newPassword && (newPassword === confirmPassword)
     return (
       <Fragment>
         <div className="login">
@@ -77,11 +81,11 @@ class Login extends Component {
             <div className="signUpContent">
               <input id="firstNamefield" type="text" placeholder="First Name" />
               <input id="lastNamefield" type="text" placeholder="Last Name" />
-              <input id="emailIdfield" value={this.state.email} onChange={this.handleChange} type="email" name="email" aria-describedby="emailHelp" placeholder="Email Address" />
-              <input id="confirmEmailIdfield" value={this.state.confirmEmail} onChange={this.handleChange} type="email" name="confirmEmail" aria-describedby="emailHelp" placeholder="Confirm Email Address" />
-              <input id="newPasswordfield" type="password" value={this.state.password} onChange={this.handleChange} name="password" placeholder="Password" />
-              <input id="confirmNewPasswordfield" value={this.state.confirmPassword} onChange={this.handleChange} type="password" name="confirmPassword" placeholder="Confirm Password" />
-              <button id="createBtn" onClick={this.signup}>CREATE</button>
+              <input id="emailIdfield" value={email} onChange={this.handleChange} type="email" name="email" aria-describedby="emailHelp" placeholder="Email Address" />
+              <input id="confirmEmailIdfield" value={confirmEmail} onChange={this.handleChange} type="email" name="confirmEmail" aria-describedby="emailHelp" placeholder="Confirm Email Address" />
+              <input id="newPasswordfield" type="password" value={newPassword} onChange={this.handleChange} name="newPassword" placeholder="Password" />
+              <input id="confirmNewPasswordfield" value={confirmPassword} onChange={this.handleChange} type="password" name="confirmPassword" placeholder="Confirm Password" />
+              <button id="createBtn" className={createBtnStatus ? "" : "createInacitve"} onClick={createBtnStatus ? this.signup : () => { }} disabled={!createBtnStatus}>CREATE</button>
               <button id="facebookLoginBtn">SIGN IN WITH FACEBOOK</button>
               <span id="footerfield">View our Privacy Policy for more details.</span>
             </div>
@@ -92,9 +96,9 @@ class Login extends Component {
                 <p>Shopping</p>
                 <p>World</p>
               </div>
-              <input id="mailIdfield" value={this.state.email} onChange={this.handleChange} type="email" name="email" aria-describedby="emailHelp" placeholder="Email Address" />
+              <input id="mailIdfield" value={email} onChange={this.handleChange} type="email" name="email" aria-describedby="emailHelp" placeholder="Email Address" />
               <div className="password-section">
-                <input id="passwordfield" value={this.state.password} onChange={this.handleChange} type={togglePasswordDisplay ? "text" : "password"} name="password" placeholder="Password" />
+                <input id="passwordfield" value={password} onChange={this.handleChange} type={togglePasswordDisplay ? "text" : "password"} name="password" placeholder="Password" />
                 <span id="showpasswordbtn" className="show-password" onClick={this.togglePasswordDisplay}>{togglePasswordDisplay ? "HIDE" : "SHOW"}</span>
               </div>
               <button id="loginBtn" onClick={this.login}>LOGIN</button>

@@ -139,6 +139,11 @@
   cursor: pointer;
 }
 
+.createInacitve{
+  background: #868384 !important;
+  cursor: not-allowed !important;
+}
+
 .forgot-password-btn {
   display: inline-block;
   margin-top: 20px;
