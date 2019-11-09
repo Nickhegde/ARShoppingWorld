@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import fire from './Config/Fire';
+import { fire } from './Config/Fire';
 import FacebookLogin from './FacebookLogin';
 import './Login.css';
 
@@ -29,7 +29,7 @@ class Login extends Component {
   login(e) {
     e.preventDefault();
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
-      this.props.history.push("/");
+      // this.props.history.push("/");
     })
       .catch((error) => {
         console.log(error);
@@ -55,16 +55,6 @@ class Login extends Component {
     this.setState({ flag: 0 });
     this.setState({ borderBottom: 'sign-in' });
 
-  }
-
-  onFacebookLogin = (loginStatus, resultObject) => {
-    if (loginStatus === true) {
-      this.setState({
-        username: resultObject.user.name
-      });
-    } else {
-      alert('Facebook login error');
-    }
   }
 
   render() {
@@ -100,8 +90,8 @@ class Login extends Component {
               <input id="mailIdfield" value={this.state.email} onChange={this.handleChange} type="email" name="email" aria-describedby="emailHelp" placeholder="Email Address" />
               <input id="passwordfield" value={this.state.password} onChange={this.handleChange} type="password" name="password" placeholder="Password" />
               <button id="loginBtn" onClick={this.login}>LOGIN</button>
-              <span>Forgot Password?</span>
-              <FacebookLogin onLogin={this.onFacebookLogin}>
+              <span className='forgot-password-btn'>Forgot Password?</span>
+              <FacebookLogin>
                 <button id="facebookLoginBtn" >SIGN IN WITH FACEBOOK</button>
               </FacebookLogin>
               <span id="footerfield">View our Privacy Policy for more details.</span>
