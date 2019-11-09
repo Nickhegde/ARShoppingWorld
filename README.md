@@ -167,6 +167,8 @@ Other than these major features there might be some minor bugs or issues which w
 
 [https://aframe.io/docs/0.9.0/introduction/](https://aframe.io/docs/0.9.0/introduction/)
 
+[https://menubar.io/firebase-facebook-login-react](https://menubar.io/firebase-facebook-login-react)
+
 
 
 
