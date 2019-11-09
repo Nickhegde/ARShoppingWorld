@@ -163,6 +163,8 @@ Other than these major features there might be some minor bugs or issues which w
 
 ## Acknowledgements
 
+[https://firebase.google.com/docs/auth/web/firebaseui](https://firebase.google.com/docs/auth/web/firebaseui)
+
 [https://github.com/prashant-andani/AR-Alphabets](https://github.com/prashant-andani/AR-Alphabets)
 
 [https://aframe.io/docs/0.9.0/introduction/](https://aframe.io/docs/0.9.0/introduction/)
