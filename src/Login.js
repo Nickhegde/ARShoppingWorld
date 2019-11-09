@@ -20,7 +20,8 @@ class Login extends Component {
       flag: 0,
       username: null,
       borderBottom: 'sign-in',
-      togglePasswordDisplay: false
+      togglePasswordDisplay: false,
+      showErrorMsg: false
     };
   }
 
@@ -87,7 +88,6 @@ class Login extends Component {
               <input id="confirmNewPasswordfield" value={confirmPassword} onChange={this.handleChange} type="password" name="confirmPassword" placeholder="Confirm Password" />
               <button id="createBtn" className={createBtnStatus ? "" : "createInacitve"} onClick={createBtnStatus ? this.signup : () => { }} disabled={!createBtnStatus}>CREATE</button>
               <button id="facebookLoginBtn">SIGN IN WITH FACEBOOK</button>
-              <span id="footerfield">View our Privacy Policy for more details.</span>
             </div>
           </div>) : (<div className="content">
             <section className="signInCard">
@@ -106,7 +106,6 @@ class Login extends Component {
               <FacebookLogin>
                 <button id="facebookLoginBtn" >SIGN IN WITH FACEBOOK</button>
               </FacebookLogin>
-              <span id="footerfield">View our Privacy Policy for more details.</span>
             </section>
           </div>)}
         </div>

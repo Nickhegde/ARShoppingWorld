@@ -169,16 +169,6 @@
   cursor: pointer;
 }
 
-#footerfield {
-  color: #2f2b2c;
-  font-family: Montserrat;
-  font-size: 17px;
-  font-weight: 600;
-  line-height: 21px;
-  margin-top: 15vh;
-  ;
-}
-
 /* signup */
 .signUpContainer {
   text-align: center;
@@ -216,11 +206,6 @@
   .signInCard {
     margin-top: 5px;
   }
-
-  #footerfield {
-    margin-top: 15px;
-  }
-
 }
 
 @media screen and (max-width:935px) {
