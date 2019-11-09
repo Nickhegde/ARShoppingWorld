@@ -242,12 +242,8 @@
   height: 30px;
 }
 
-.signInCard #loginBtn,
 .signUpContent #createBtn {
-  height: 30px;
-}
-#facebookLoginBtn {
-  height: 30px;
+  height: 40px;
 }
 }
 
