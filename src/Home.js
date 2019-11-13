@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Men from './Men';
-import fire from './Config/Fire';
+import { fire } from './Config/Fire';
 import './ShoppingWorld.css';
 import { Link } from 'react-router-dom';
 
