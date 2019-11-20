@@ -103,11 +103,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 The registration process is handled using [Firebase](https://firebase.google.com).
 Firebase provides a full set of authentication options out-of-the-box. Firebase automatically stores your users’ credentials securely (using bcrypt) and redundantly (with replication and daily off-site backups). This separates sensitive user credentials from your application data, and lets you focus on the user interface and experience for your app.
 
-![Register](Images/register.png?raw=true "Register Page")
+![Register](src/Images/register.png?raw=true "Register Page")
 
 The user has to fill his details in the registration form and submit it.
 
-![Login](Images/login.png?raw=true "Login Page")
+![Login](src/Images/login.png?raw=true "Login Page")
 
 The user can login using registered credentials. Error messages are displayed if user enters wrong email or password.
 
@@ -115,7 +115,7 @@ The user can login using registered credentials. Error messages are displayed if
 
 On successfull login, the user will land into Home page.
 
-![Home](Images/home.png?raw=true "Home Page")
+![Home](src/Images/home.png?raw=true "Home Page")
 
 The user can select Men, Women or Kids section anything that is preferred.
 
@@ -123,7 +123,7 @@ The user can select Men, Women or Kids section anything that is preferred.
 
 On selecting Men, the user will land to Men's section.
 
-![Men](Images/shopMen.png?raw=true "Men's section Page")
+![Men](src/Images/shopMen.png?raw=true "Men's section Page")
 
 Here, the user can select any shirt he wishes to try on and click it, which lands the user on trial page.
 
@@ -135,7 +135,7 @@ The browser will ask user permission to open Camera and user has to allow it.
 
 Then the following screen appears,
 
-![Blank](Images/plainScreen.png?raw=true "Blank screen")
+![Blank](src/Images/plainScreen.png?raw=true "Blank screen")
 
 Where the user will see three buttons, `Back`, `+` and `-`.
 `Back` button navigates to previous page.
@@ -144,11 +144,11 @@ Now, if the user keeps the `hiro` marker infront of the camera the 3D-object app
 
 The marker can be downloaded [here](https://upload.wikimedia.org/wikipedia/commons/4/48/Hiro_marker_ARjs.png)
 
-![Marker](Images/hiro.png?raw=true "Hiro marker")
+![Marker](src/Images/hiro.png?raw=true "Hiro marker")
 
 After placing marker the 3D-model looks lik this,
 
-![3D-model](Images/ar.png?raw=true "Shirt model")
+![3D-model](src/Images/ar.png?raw=true "Shirt model")
 
 The printout of marker can be placed on the user's body and the shirt will appear on the user as if he is wearing it, thus providing the trial room like experience.
 
