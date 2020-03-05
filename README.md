@@ -171,6 +171,9 @@ Other than these major features there might be some minor bugs or issues which w
 
 [https://menubar.io/firebase-facebook-login-react](https://menubar.io/firebase-facebook-login-react)
 
+## Deployment
+
+[https://tender-tesla-71ceed.netlify.com/](https://tender-tesla-71ceed.netlify.com/)
 
 
 
