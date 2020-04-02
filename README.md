@@ -173,7 +173,7 @@ Other than these major features there might be some minor bugs or issues which w
 
 ## Deployment
 
-[https://tender-tesla-71ceed.netlify.com/](https://tender-tesla-71ceed.netlify.com/)
+[https://arshoppingworld.netlify.com/](https://arshoppingworld.netlify.com/)
 
 
 
